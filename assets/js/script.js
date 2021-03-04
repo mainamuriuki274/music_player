@@ -78,6 +78,7 @@ function load_track(index_no){
     present.innerHTML = index_no + 1;
 }
 
+
 load_track(index_no);
 
 
@@ -133,7 +134,9 @@ function next_song(){
 
     }
 }
-
+function shuffle(){
+    track.setVolume(50); // percent
+}
 
 // previous song
 function previous_song(){
@@ -162,6 +165,16 @@ function change_duration(){
     track.currentTime = slider_position;
 }
 
+// autoplay function
+function autoplay_switch(){
+    if (autoplay==1){
+        autoplay = 0;
+        auto_play.style.borderImageSource = "linear-gradient(to left, #00d0ff, #25ffbf)";
+    }else{
+        autoplay = 1;
+        auto_play.style.borderImageSource = "linear-gradient(to left, #a9a9a9, #a9a9a9)";
+    }
+}
 
 
 function range_slider(){

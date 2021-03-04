@@ -119,3 +119,13 @@ input[type=range]{
 	background-image: linear-gradient(to left,#00d0ff, #25ffbf);
 	color: white;
 }
+.auto{
+	margin: 0 auto;
+	color: #FFF;
+	font-size: 12px;
+	background: transparent;
+	border: 5px solid;
+	border-image-slice: 1;
+	border-width: 2px;
+	border-image-source: linear-gradient(to left, #a9a9a9, #a9a9a9);
+}
