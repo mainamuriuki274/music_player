@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bambika Music Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets\css\styles.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+<div style="background: black;" class="container pt-2 pb-3">
+    <div class="row">
+        <div class="col-3">
+            <div class="row h-100">
+                <div class="col-6 song_art">
+                    <img  id="track_image">
+                </div>
+                <div class="col-6">
+                    <div class="song_details">
+                        <a id="title" href="#">Bypass</a>
+                        <div class="w-100 h-100 d-flex">
+                            <a id="artist" href="#">Savara, </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-6">
+
+            <!---- middle part --->
+            <div class="middle d-flex align-items-center justify-content-center w-100">
+                <button onclick="previous_song()" id="pre"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+                <button onclick="justplay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+                <button onclick="next_song()" id="next"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+            </div>
+
+            <!--- song duration part --->
+            <div class="duration w-100 mt-3">
+                <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="volume">
+                <p id="volume_show">100</p>
+                <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"></i>
+                <input type="range" min="0" max="100" value="100" onchange="volume_change()" id="volume">
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets\js\script.js"></script>
+</body>
+</html>
